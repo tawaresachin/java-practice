@@ -26,7 +26,7 @@ public class BaseClass 		//Main Class
 	{
 		System.out.println("I am static method2");
 		method1();
-		test1.method3();
+		test1.method3();			//calling static method in static method
 		
 	}
 	
@@ -35,11 +35,11 @@ public class BaseClass 		//Main Class
 		System.out.println("I am non-static method3");
 	}
 	
-	public void method4()
+	public void method4()		//Non static metod
 	{
 		System.out.println("I am non-static method4");
-		this.method3();
-		test1.method2();
+		this.method3();			//calling non-static method in another non-static method
+		test1.method2();		//calling static method in non-static method
 		
 	}
 	
