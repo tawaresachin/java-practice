@@ -1,31 +1,29 @@
 package JavaBasics;
 
-public class test1 
+public class test1   // Concrete class --> all complete methods
 {
 	int i=10;
 	double j=20;
 	String s="Testing Class";
 	
-	/* Datatypes-
-	 A.Primitive datatypes (m/m size is fixed)
-	 * 1. byte- 8-bit/1-byte
-	 * 2. short- 2 bytes
-	 * 3. int- 4 bytes
-	 * 4. long- 8 bytes
-	 * 5. float- 4 bytes
-	 * 6. double- 8 bytes
-	 * 7. char - 2 bytes
-	 * 8. boolean - 1 bit
-	 
-	 B. Non Primitive datatypes (m/m size is adaptive)
-	  *1. Class
-	  *2. String
-	 */
-	
-	public void method()
+	public void method()   //Complete method
 	{
-		System.out.println("Batch1");
-		System.out.println(s);
+	  System.out.println("Complete method1");
 	}
-
+	
+	public void method1()   //Complete method
+	{
+		System.out.println("Complete method2");
+		this.method();
+	}
+	
+	public static void method2()
+	{
+		System.out.println("I am static method from class test1");
+	}
+	
+	public static void method3()
+	{
+		System.out.println("to be called in static method of another class");
+	}
 }
