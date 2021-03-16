@@ -1,6 +1,6 @@
 package JavaBasics;
 
-public class test1   // Concrete class --> all complete methods
+public class test1   		// Concrete class --> all complete methods
 {
 	int i=10;
 	double j=20;
