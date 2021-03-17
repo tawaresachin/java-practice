@@ -1,5 +1,5 @@
 package JavaBasics;
-import java.lang.*;
+//import java.lang.*;
 
 public class BaseClass 					//Main Class--> the class that contains main method
 
@@ -106,9 +106,81 @@ public class BaseClass 					//Main Class--> the class that contains main method
 		
 		System.out.println("Calling colours using enum: "+color.BLACK);
 		
+		String S1="Batch1";				//Stores in Constant Pool Area- Duplicates not allowed
+		String S2="BATCH1";				//Stores in Constant Pool Area- Duplicates not allowed
+		String S3=new String("Batch1");	//Stores in Constant Pool Area-Duplicates are allowed
+		String S4=new String("Batch1"); //Stores in Constant Pool Area-Duplicates are allowed
+		String S5=" Lec-XX";
+		if(S1==S2)
+		{
+			System.out.println("Both Strings S1 & S2 points to same memory");
+		}
 		
+		if(S3==S4)
+		{
+			System.out.println("Both Strings S1 & S2 points to same memory");
+		}
+		else
+		{
+			System.out.println("Both Strings S1 & S2 points to different locations");
+		}
 		
+		//Operations on String using String Class in Java.lang package
+		//1. To Evaluate lenght of String
+		int length=S1.length();
+		System.out.println("Lenght of the String S1: "+length);
 		
+		//2. To Check equal strings
+		boolean equal1 = S1.equals(S2);
+		boolean equal2=S3.equals(S4);
+		boolean equal3=S1.equalsIgnoreCase(S2);
+		System.out.println("If S1 & S2 are equal?: "+equal1);
+		System.out.println("If S3 & S4 are equal?: "+equal2);
+		System.out.println("If S1 & S2 are equal ignoring case?: "+equal3);
+		
+		//3. To Concat two strings
+		String S6=S1+S5;
+		System.out.println("Concat two strings using '+' operator: "+S6);
+		String S7=S1.concat(S5);
+		System.out.println("Concat two strings using 'concat' method: "+S7);
+		
+		//4. To Split the string
+		String S8="This is Testing Class";
+		String[] StrArr = S8.split(" ");
+		String[] ChrArr = S8.split("");
+		String[] ChrArr2=S8.split("n");
+		char[] ChrArr1 = S8.toCharArray();
+		
+		for(String st:StrArr)  //For-Each loop
+		{
+			System.out.println(st);
+		}
+		
+		for(String ch:ChrArr)
+		{
+			System.out.println(ch);
+		}
+		for(String ch1:ChrArr2)
+		{
+			System.out.println(ch1);
+		}
+		for(char ch2:ChrArr1)
+		{
+			System.out.println(ch2);
+		}
+
+		//5. Returning specific character at given index
+		
+		char chh = S8.charAt(5);
+		System.out.println("Character at 5th position is: "+chh);
+		
+		//6. To Address position of character in string
+		int ind=S8.indexOf('C');
+		int ind1=S8.indexOf('i');    //this returns first index
+		int ind2=S8.lastIndexOf('i'); //this returns last index
+		System.out.println("Position of C: "+ind);
+		System.out.println("Position of i: "+ind1);
+		System.out.println("Position of last i"+ind2);
 	}
 
 }
