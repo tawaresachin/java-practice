@@ -1,5 +1,6 @@
 package JavaBasics;
-//import java.lang.*;
+import java.lang.*;
+import java.util.*;
 
 public class BaseClass 					//Main Class--> the class that contains main method
 
@@ -181,6 +182,93 @@ public class BaseClass 					//Main Class--> the class that contains main method
 		System.out.println("Position of C: "+ind);
 		System.out.println("Position of i: "+ind1);
 		System.out.println("Position of last i"+ind2);
+		
+		//7. Checking sub-part of given string
+		String S9="Testing";
+		boolean flag = S8.contains(S9);
+		boolean flag1 = S8.contains(S1);
+		System.out.println("Whether S9 is part of parent String S8?: "+flag);
+		System.out.println("Whether S1 is part of parent String S8?: "+flag1);
+		
+		//8. To change the case of String
+		String S10=S8.toUpperCase();		//UpperCase
+		String S11=S8.toLowerCase();		//LowerCase
+		System.out.println("S8 in Upper case: "+S10);
+		System.out.println("S8 in Lower case: "+S11);
+		
+		//10. Checking the Start & End of String
+		boolean flag3 = S8.startsWith("This is");
+		boolean flag4 = S8.startsWith("i am");
+		boolean flag5 = S8.endsWith("class");
+		boolean flag6 = S8.endsWith("Class");
+		System.out.println("Whether S8 is starting with 'This is'?: "+flag3);
+		System.out.println("Whether S8 is starting with 'i am'?: "+flag4);
+		System.out.println("Whether S8 is ending with 'class'?: "+flag5);
+		System.out.println("Whether S8 is ending with 'Class'?: "+flag6);
+		
+		//11. Replacing part of string 
+		String S12 = S8.replace("Testing", "Java");
+		System.out.println("Replaced String S8 is: "+S12);
+		
+		//12.To check if string is empty & blank
+		String S13="";
+		String S14=" ";
+		boolean flag7=S8.isEmpty();
+		boolean flag8=S13.isEmpty();
+		boolean flag9=S13.isBlank();
+		boolean flag10=S14.isEmpty();		//Empty=No character 
+		boolean flag11=S14.isBlank();		//Blank=only spaces
+		System.out.println("whether string S8 is Empty?: "+flag7);
+		System.out.println("whether string S13 is Empty?: "+flag8);
+		System.out.println("whether string S13 is blank?: "+flag9);
+		System.out.println("whether string S14 is Empty?: "+flag10);
+		System.out.println("whether string S14 is blank?: "+flag11);
+		
+		//13. To extract the subString within given range if indices
+		String S15=S8.substring(5, 15);
+		System.out.println("Substring of String S18 is: "+S15);
+		
+		//Defining one-dimensional (1D) array
+		int[] Arr1= {1,2,3,4};					//fashion-1
+		char Arr2[]= {'a','b','c','d','e'};		//fashion-2
+		String[] Arr3=new String[10];			//creating array object
+		Arr3[0]= "this";
+		Arr3[1]="is";
+		Arr3[2]="Java";
+		Arr3[3]="class";
+		
+		//to calculate lenght of array
+		int l1=Arr1.length;
+		int l2=Arr2.length;
+		int l3=Arr3.length;
+		System.out.println("Lenght of Arr1: "+l1);
+		System.out.println("Lenght of Arr2: "+l2);
+		System.out.println("Lenght of Arr3: "+l3);
+		
+		//Display array elements using for loop
+		for(int i=0;i<l1;i++)
+		{
+			System.out.println("Element "+i+" of array Arr1: "+Arr1[i]);
+		}
+		for(int i=0;i<l2;i++)
+		{
+			System.out.println("Element "+i+" of array Arr2: "+Arr2[i]);
+		}
+		for(int i=0;i<l3;i++)
+		{
+			System.out.println("Element "+i+" of array Arr3: "+Arr3[i]);
+		}
+		
+		//Display array elements using for-each loop
+		for(int x:Arr1)
+		{
+			System.out.println("Array1 has value: "+x);
+		}
+		for(String x:Arr3)
+		{
+			System.out.println("Array3 has value: "+x);
+		}
+		
 	}
 
 }
