@@ -229,13 +229,17 @@ public class BaseClass 					//Main Class--> the class that contains main method
 		System.out.println("Substring of String S18 is: "+S15);
 		
 		//Defining one-dimensional (1D) array
-		int[] Arr1= {1,2,3,4};					//fashion-1
-		char Arr2[]= {'a','b','c','d','e'};		//fashion-2
+		int[] Arr1= {2,4,1,3};					//fashion-1
+		char Arr2[]= {'c','e','a','b','d'};		//fashion-2
 		String[] Arr3=new String[10];			//creating array object
 		Arr3[0]= "this";
 		Arr3[1]="is";
 		Arr3[2]="Java";
 		Arr3[3]="class";
+		
+		String[] Arr4= {"This","is","Testing","Class"};
+		int[] Arr5= {2,4,1,3};
+		int[] Arr6= {2,4,1,3};
 		
 		//to calculate lenght of array
 		int l1=Arr1.length;
@@ -269,6 +273,51 @@ public class BaseClass 					//Main Class--> the class that contains main method
 			System.out.println("Array3 has value: "+x);
 		}
 		
+		//Display array using toString method
+		
+		String ss1=Arrays.toString(Arr1);
+		System.out.println("Display array Arr1 as a whole: "+ss1);
+		
+		//Sorting the array
+		Arrays.sort(Arr1);
+		String ss2=Arrays.toString(Arr1);
+		System.out.println("Sorted Array Arr1 is: "+ ss2);
+		Arrays.parallelSort(Arr2);
+		String ss3=Arrays.toString(Arr2);
+		System.out.println("Sorted Array Arr2 is: "+ ss3);
+		
+		//Searching element of array (Binary Search)
+		int BS = Arrays.binarySearch(Arr2, 'e');
+		System.out.println("Location of element 'e' on array Arr2 is: "+BS);
+	
+		Arrays.sort(Arr4);
+		System.out.println(Arrays.toString(Arr4));
+		int BS1=Arrays.binarySearch(Arr4, "is");
+		System.out.println("Location of string 'Java' on array Arr4 is: "+BS1);
+		
+		//Comparing two arrays
+		Boolean flagg=Arrays.equals(Arr5, Arr6);
+		System.out.println("Comparing Arr5 & Arr6: "+flagg);
+		
+		//Two domentional array
+		int[][] Arr7= {{1,2,3},
+				{4,5,6}};
+		int [][] Arr8=new int[2][2];
+		 Arr8[0][0]=8;
+		 Arr8[0][1]=9;
+		 Arr8[1][0]=10;
+		 Arr8[1][1]=11;
+		 
+		 for(int i = 0;i<2;i++)
+		 {
+			 for(int j=0;j<3;j++)
+			 {
+				 System.out.println("Element of Array: "+Arr7[i][j]);
+			 }
+		 }
+		 
+		 
+		 
 	}
 
 }
