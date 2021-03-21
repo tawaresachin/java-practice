@@ -316,8 +316,117 @@ public class BaseClass 					//Main Class--> the class that contains main method
 			 }
 		 }
 		 
-		 
-		 
+		//1. List - a) Array-List 
+		ArrayList al=new ArrayList();
+
+		al.add(1);		//Insert values in arraylist
+		al.add('c');
+		al.add("Test");
+		al.add(1.5);
+		al.add(true);
+		al.add(null);
+		al.add(' ');
+		
+		System.out.println("Array List: "+al.toString());
+		al.add(0,2025);	  		//Insert values in array list- non-synchronised behaviour
+		System.out.println("Array List: "+al.toString());
+		
+		al.set(0, "Java");		//Update value at certain position
+		System.out.println("Array List: "+al.toString());
+		
+		al.remove(3);			//Delete value at certain position
+		System.out.println("Array List: "+al.toString());
+		
+		Collections.reverse(al);
+		System.out.println("Array List: "+al.toString());
+		
+		ListIterator it = al.listIterator();   //used for retrival & deletion
+		
+		while(it.hasNext())
+		{
+			System.out.println("Array List Element: "+it.next());
+		}
+	
+		Object val1=al.get(1);
+		System.out.println("Object retrived has value: "+val1);
+		
+		al.clear();					//Clear alll objects in arraylist
+		System.out.println("Array List: "+al.toString());
+		
+		//1. List - b) Vector
+		Vector v=new Vector();
+		System.out.println("Capacity of vector: "+v.capacity());
+		System.out.println("if Vector is empty?: "+v.isEmpty());
+		
+		
+		v.add(3);
+		v.add('g');
+		v.add("Manual");
+		v.add(1.25);
+		v.add(false);
+		v.add(null);
+		v.add(' ');
+		
+		System.out.println("Vector has values: "+v);
+		v.add(2,"Automation");
+		System.out.println("Vector has values: "+v);
+		v.set(2, 'h');
+		System.out.println("Vector has values: "+v);
+		v.remove(2);
+		System.out.println("Vector has values: "+v);
+		
+		Iterator it1 = v.iterator();
+		while(it1.hasNext())
+		{
+			System.out.println("values inside the vector: "+it1.next());
+		}
+		
+		Collections.reverse(v);
+		System.out.println("Reversed vector is: "+v);
+		System.out.println("Size of vector: "+v.size());
+		
+		Object val2=v.get(2);
+		System.out.println("Object retrived has value: "+val2);
+		v.clear();
+		System.out.println("Vector has values: "+v);
+		
+		//1. List - c) LinkedList
+		LinkedList lnl=new LinkedList();
+		
+		lnl.add("Test");
+		lnl.add(20.21);
+		lnl.add('x');
+		lnl.add(null);
+		lnl.add(" ");
+		lnl.add(true);
+		System.out.println("Linked List is: "+lnl);
+		
+		lnl.add(2, 43);
+		System.out.println("Linked List is: "+lnl);
+		
+		lnl.set(2, 50);
+		System.out.println("Linked List is: "+lnl);
+		
+		lnl.remove(2);
+		System.out.println("Linked List is: "+lnl);
+		
+		System.out.println("The size of linked list is: "+lnl.size());
+		
+		Iterator it2 = lnl.iterator();
+		while(it2.hasNext())
+		{
+			System.out.println("The Element of LinkedList: "+it2.next());
+		}
+		
+		Collections.reverse(lnl);
+		System.out.println("Linked List is: "+lnl);
+		
+		Object val3 = lnl.get(3);
+		System.out.println("Object retrived is: "+val3.toString());
+		
+		lnl.clear();
+		System.out.println("Linked List is: "+lnl);
+		
 	}
 
 }
