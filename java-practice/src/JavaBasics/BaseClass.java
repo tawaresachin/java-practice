@@ -427,6 +427,161 @@ public class BaseClass 					//Main Class--> the class that contains main method
 		lnl.clear();
 		System.out.println("Linked List is: "+lnl);
 		
+		//1. List - d) Stack
+		Stack stk=new Stack();
+		stk.add(5);
+		stk.add('F');
+		stk.add("Automation");
+		stk.add(true);
+		stk.add(null);
+		stk.add(' ');
+		
+		System.out.println("Contents on the stack are: "+stk);
+		
+		stk.add(2,'@');
+		System.out.println("Contents on the stack are: "+stk);
+		
+		stk.set(2, '%');
+		System.out.println("Contents on the stack are: "+stk);
+		
+		stk.remove(2);
+		System.out.println("Contents on the stack are: "+stk);
+		
+		Iterator it4 = stk.iterator();
+		while(it4.hasNext())
+		{
+			System.out.println("Element of stack: "+it4.next());
+		}
+		
+		stk.push("push");
+		System.out.println("Contents on the stack are: "+stk);
+		
+		stk.pop();				//LIFO behaviour
+		stk.pop();
+		System.out.println("Contents on the stack are: "+stk);
+		
+		Object xx = stk.peek();
+		System.out.println("Contents on the stack are: "+xx);
+		
+		stk.clear();
+		System.out.println("Contents on the stack are: "+stk);
+		
+		//2. Set - a) HashSet
+		
+		HashSet hs=new HashSet();
+		
+		hs.add(20);
+		hs.add("String");
+		hs.add('K');
+		hs.add(true);
+		hs.add(true);
+		hs.add(null);
+		hs.add(' ');
+		
+		System.out.println("Elements in HashSet are: "+hs);
+		
+		int size1=hs.size();
+		System.out.println("Size of HashSet is: "+size1);
+		
+		hs.remove(' ');
+		System.out.println("Elements in HashSet are: "+hs);
+		
+		Iterator it5 = hs.iterator();
+		while(it5.hasNext())
+		{
+			System.out.println("Elements od HashSet are: "+it5.next());
+		}
+		
+		
+		hs.clear();
+		System.out.println("Elements in HashSet are: "+hs);
+		
+		//2. Set - b) LinkedHashSet
+		LinkedHashSet lhs=new LinkedHashSet();
+		
+		lhs.add(7);
+		lhs.add("Lion");
+		lhs.add('L');
+		lhs.add(true);
+		lhs.add(false);
+		lhs.add(null);
+		lhs.add(null);
+		
+		System.out.println("Elements in LinkedHashSet are: "+lhs);
+		
+		int size2=lhs.size();
+		System.out.println("Size of LinkedHashSet is: "+size2);
+		
+		lhs.remove('L');
+		System.out.println("Elements in LinkedHashSet are: "+lhs);
+		
+		Iterator it6 = lhs.iterator();
+		while(it6.hasNext())
+		{
+			System.out.println("Element of LinkedHashSet are: "+it6.next());
+		}
+		
+		lhs.clear();
+		System.out.println("Elements in LinkedHashSet are: "+lhs);
+		
+		
+		//2. Set - c) TreeSet
+		
+		TreeSet<Integer> ts=new TreeSet<Integer>();  //different datatypes are not allowed
+		ts.add(9);
+		ts.add(100);
+		ts.add(20);
+		ts.add(50);
+//		ts.add(null);				//null is not allowed
+
+
+		System.out.println("Elements of TreeSet are: "+ts);
+		
+		int size4=ts.size();
+		System.out.println("Size of treeset is: "+size4);
+		
+		ts.remove(100);
+		System.out.println("Elements of TreeSet are: "+ts);
+		
+		Iterator<Integer> it7 = ts.iterator();
+		
+		while(it7.hasNext())
+		{
+			System.out.println("Element in treeset are: "+it7.next());
+		}
+		
+		ts.clear();
+		System.out.println("Elements of TreeSet are: "+ts);
+		
+		//3. Queue
+		Queue qu=new LinkedList();
+		qu.add("string");
+		qu.add('c');
+		qu.add(44);
+		qu.add(null);
+		qu.add(true);
+		
+		System.out.println("Elements in queue are: "+qu);
+		
+		int size5=qu.size();
+		System.out.println("Size of queue: "+size5);
+		
+		qu.remove(null);
+		System.out.println("Elements in queue are: "+qu);
+		
+		Iterator it8 = qu.iterator();
+		while(it8.hasNext())
+		{
+			System.out.println("Elements of queue are: "+it8.next());
+		}
+		
+		Object yy = qu.peek();
+		System.out.println("Object returned using peek method is: "+yy);
+		
+		qu.poll();
+		System.out.println("Elements in queue are: "+qu);
+		
+		
 	}
 
 }
