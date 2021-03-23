@@ -553,7 +553,8 @@ public class BaseClass 					//Main Class--> the class that contains main method
 		ts.clear();
 		System.out.println("Elements of TreeSet are: "+ts);
 		
-		//3. Queue
+		//3. Queue (Implementation class is LinkedList)
+		
 		Queue qu=new LinkedList();
 		qu.add("string");
 		qu.add('c');
