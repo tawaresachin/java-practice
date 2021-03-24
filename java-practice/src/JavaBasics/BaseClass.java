@@ -1,6 +1,7 @@
 package JavaBasics;
 import java.lang.*;
 import java.util.*;
+import java.util.Map.Entry;
 
 public class BaseClass 					//Main Class--> the class that contains main method
 
@@ -582,6 +583,87 @@ public class BaseClass 					//Main Class--> the class that contains main method
 		qu.poll();
 		System.out.println("Elements in queue are: "+qu);
 		
+		// 4. Maps- a) HashMap
+		
+		HashMap<String, Integer> hm=new HashMap();
+		HashMap<String, Integer> hm1=new HashMap();
+		
+		hm.put("a", 10);
+		hm.put("b", 20);
+		hm.put("c", 30);
+		hm.put("d", null);
+		hm.put(null, 40);
+		hm.put("e", null);
+		hm.put("f", null);
+		
+		System.out.println("Hash map contains: "+hm);
+		
+		Integer val6 = hm.get("c");
+		System.out.println("Value at certain v is: "+val6);
+		
+		Boolean flag15=hm.containsKey("30");
+		Boolean flag16=hm.containsValue(null);
+		System.out.println("If hashmap contains key 30? "+flag15);
+		System.out.println("If hashmap contains value null? "+flag16);
+		
+		int size11=hm.size();
+		System.out.println("Size of HashMap is: "+size11);
+		
+		hm.remove("d");
+		System.out.println("Hash map contains: "+hm);
+		
+		Set<String> st = hm.keySet();
+		System.out.println("Set of Keys are: "+st);
+		
+		Collection<Integer> val7 = hm.values();
+		System.out.println("Values in hashmap are: "+val7);
+		
+		Set<Entry<String, Integer>> st1 = hm.entrySet();
+		System.out.println("Hashmap converted into Set: "+st1);
+		
+		String stt="Hi Hello Hi Hello Hi";
+		String[] stt1=stt.split(" "); // [Hi, Hello, Hi, Hello, Hi]
+		
+		for(String x:stt1)
+		{
+			if(!hm1.containsKey(x))				//Hi =3
+			{
+				hm1.put(x, 1);					//Hello=2
+			}
+			else
+			{
+				hm1.put(x, hm1.get(x)+1);
+			}
+		}
+		
+		System.out.println("Hash map for given string is: "+hm1);
+		
+		// 4. Maps- a) Hashtable
+		
+		Hashtable<String, Integer> ht=new Hashtable();
+		
+		ht.put("a", 1);
+		ht.put("b", 2);
+		//ht.put("c", null);
+		//ht.put(null, 3);
+		ht.put("d", 4);
+		
+		System.out.println("Hashtable view: "+ht);
+		
+		Integer value33=ht.get("d");
+		System.out.println("Value at key 'd' is: "+value33);
+		
+		Boolean flag17=ht.containsKey("b");
+		Boolean flag18=ht.containsValue(1);
+		System.out.println("If hashtable contians key 'b' ? "+flag17);
+		System.out.println("If hashtable contians value '1' ? "+flag18);
+		
+		ht.remove("a");
+		System.out.println("Hashtable view: "+ht);
+		
+		Integer intt=new Integer(2);
+		String val44 = intt.toString();
+		int val55 = intt.parseInt("123");
 		
 	}
 
