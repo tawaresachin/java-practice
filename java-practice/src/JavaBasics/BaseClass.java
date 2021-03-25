@@ -665,6 +665,41 @@ public class BaseClass 					//Main Class--> the class that contains main method
 		String val44 = intt.toString();
 		int val55 = intt.parseInt("123");
 		
+		// OOPS- Inheritance- 1. Single Level Inheritance
+		subClass child=new subClass();
+		child.bike();			//own
+		child.mobile();			//own
+		child.laptop();			//own
+		child.gold();			//parent's
+		child.car();			//parent's
+		child.house();			//parent's
+		
+		//OOPS- Inheritance- 2. Multi Level Inheritance
+		superClass parent=new superClass();
+		parent.gold();
+		parent.car();
+		parent.house();
+		parent.farm();
+		parent.business();
+		
+		child.bike();			//own
+		child.mobile();			//own
+		child.laptop();			//own
+		child.gold();			//parent's
+		child.car();			//parent's
+		child.house();			//parent's
+		child.farm();			//grandparent's
+		child.business();		//grandparent's
+		
+		//OOPS- Inheritance- 4. Hybrid Inheritance
+		subClass1 child1=new subClass1();
+		child1.tv();			//own
+		child1.cycle();			//own
+		child1.gold();			//parent's
+		child1.house();			//parent's
+		child1.car();			//parent's
+		child1.business();		//parent's
+		child1.farm();			//parent's
 	}
 
 }
