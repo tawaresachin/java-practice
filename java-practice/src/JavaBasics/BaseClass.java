@@ -700,6 +700,12 @@ public class BaseClass 					//Main Class--> the class that contains main method
 		child1.car();			//parent's
 		child1.business();		//parent's
 		child1.farm();			//parent's
+		
+		//Polymorphism- EarlyBinding
+		child1.m1();
+		child1.m1(2);
+		//Polymorphism- LateBinding
+		child1.m2();
 	}
 
 }
