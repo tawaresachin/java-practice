@@ -706,6 +706,11 @@ public class BaseClass 					//Main Class--> the class that contains main method
 		child1.m1(2);
 		//Polymorphism- LateBinding
 		child1.m2();
+		
+		privateClass pc=new privateClass();			//Abstraction
+		//pc.mx();				// private methods are hidden & cannot be called using object
+		//pc.h;					// private variables are hidden & cannot be called using object
+	
 	}
 
 }
