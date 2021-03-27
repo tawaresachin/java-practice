@@ -6,13 +6,15 @@ public class exceptionHandling {
 	
 	static void fun()
 	{
+//		int c=1/0;
 		try
 		{
 //			String stt=null;
 //			stt.length();			//NullPointerException
 			int c=1/0;				//ArithmaticException
+		
 		}
-		catch(ArrayIndexOutOfBoundsException g)
+		catch(ArithmeticException g)
 		{
 			System.out.println("this is nullpointer exception");
 			throw g;  //Rethrow of the exception
